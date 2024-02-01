@@ -35,7 +35,6 @@ function App() {
   };
 
   const handleDownload = (e) => {
-    e.preventDefault();
     const formattedCsvFile = Papa.unparse(newFileData);
     const blob = new Blob([formattedCsvFile], { type: "text/csv" });
     const a = document.createElement("a");
